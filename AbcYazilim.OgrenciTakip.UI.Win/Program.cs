@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win
 {
@@ -17,7 +18,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseKartlarForm());
+            Application.Run(new OkulKarti());
         }
     }
 }

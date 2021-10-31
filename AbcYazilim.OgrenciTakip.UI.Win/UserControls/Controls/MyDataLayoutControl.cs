@@ -44,7 +44,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Controls
             grp.OptionsTableLayoutGroup.ColumnDefinitions[1].SizeType = SizeType.Percent;
             grp.OptionsTableLayoutGroup.ColumnDefinitions[1].Width = 100;
             grp.OptionsTableLayoutGroup.ColumnDefinitions.Add(new ColumnDefinition
-                {SizeType = SizeType.Absolute, Width = 90});
+                {SizeType = SizeType.Absolute, Width = 99});
 
             grp.OptionsTableLayoutGroup.RowDefinitions.Clear();
 

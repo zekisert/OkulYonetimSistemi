@@ -72,6 +72,18 @@
     <Compile Include="Forms\BaseForms\BaseKartlarForm.Designer.cs">
       <DependentUpon>BaseKartlarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OkulForms\OkulKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OkulForms\OkulKarti.Designer.cs">
+      <DependentUpon>OkulKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OkulForms\OkulKartlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OkulForms\OkulKartlari.Designer.cs">
+      <DependentUpon>OkulKartlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IStatusBarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
@@ -165,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseKartlarForm.resx">
       <DependentUpon>BaseKartlarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OkulForms\OkulKarti.resx">
+      <DependentUpon>OkulKarti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
