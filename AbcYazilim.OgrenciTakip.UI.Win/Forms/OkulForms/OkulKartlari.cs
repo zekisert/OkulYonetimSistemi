@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms;
 
 namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.OkulForms
 {
-    public partial class OkulKartlari : DevExpress.XtraEditors.XtraForm
+    public partial class OkulKartlari : BaseKartlarForm
     {
         public OkulKartlari()
         {

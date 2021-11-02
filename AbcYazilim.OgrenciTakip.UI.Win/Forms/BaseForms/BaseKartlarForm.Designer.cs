@@ -389,8 +389,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
@@ -405,5 +403,6 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.Forms.BaseForms
         private DevExpress.XtraBars.BarButtonItem btnYazdir;
         private DevExpress.XtraBars.BarButtonItem btnCikis;
         private DevExpress.XtraBars.BarSubItem btnGonder;
+        protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
     }
 }

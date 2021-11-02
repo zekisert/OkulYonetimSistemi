@@ -181,6 +181,9 @@
     <EmbeddedResource Include="Forms\OkulForms\OkulKarti.resx">
       <DependentUpon>OkulKarti.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OkulForms\OkulKartlari.resx">
+      <DependentUpon>OkulKartlari.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
