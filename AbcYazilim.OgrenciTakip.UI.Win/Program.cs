@@ -18,7 +18,7 @@ namespace AbcYazilim.OgrenciTakip.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OkulKarti());
+            Application.Run(new OkulKartlari());
         }
     }
 }
