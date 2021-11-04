@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Controls;
 using AbcYazilim.Dal.Interfaces;
+using AbcYazilim.OgrenciTakip.Bll.Functions;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 
@@ -23,15 +25,24 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
 
         protected TResult BaseSingle<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector)
         {
-
+            GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
             return _uow.Rep.Find(filter, selector);
         }
-        
-        
-        
-        
-        
-        
+
+        protected IQueryable<TResult> BaseList<TResult>(Expression<Func<T, bool>> filter,
+            Expression<Func<T, TResult>> selector)
+        {
+            GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
+            return _uow.Rep.Select(filter, selector);
+        }
+
+        protected bool BaseInsert(BaseEntity entity, Expression<Func<T, bool>> filter)
+        {
+            GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
+            _uow.Rep.Insert(entity);
+        }
+
+
         private bool disposedValue;
 
         protected virtual void Dispose(bool disposing)
