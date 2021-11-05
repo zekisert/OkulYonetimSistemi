@@ -64,6 +64,10 @@
       <Project>{81A502A0-5A2E-404D-AB9E-274E9D1B0AC2}</Project>
       <Name>AbcYazilim.Dal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Common\AbcYazilim.OgrenciTakip.Common.csproj">
+      <Project>{272AA6AC-3376-4362-83EF-9E6334F6471F}</Project>
+      <Name>AbcYazilim.OgrenciTakip.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AbcYazilim.OgrenciTakip.Data\AbcYazilim.OgrenciTakip.Data.csproj">
       <Project>{170eef01-4a07-4d69-8ff5-be7177e5a363}</Project>
       <Name>AbcYazilim.OgrenciTakip.Data</Name>

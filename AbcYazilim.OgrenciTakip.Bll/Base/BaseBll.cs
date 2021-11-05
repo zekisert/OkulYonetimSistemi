@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using AbcYazilim.Dal.Interfaces;
 using AbcYazilim.OgrenciTakip.Bll.Functions;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
+using AbcYazilim.OgrenciTakip.Common.Enums;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 
 namespace AbcYazilim.OgrenciTakip.Bll.Base
@@ -52,7 +53,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
             return _uow.Save();
         }
 
-        protected bool BaseDelete(BaseEntity entity,)
+        protected bool BaseDelete(BaseEntity entity,KartTuru kartTuru,bool mesajVer = true)
 
 
         private bool disposedValue;
