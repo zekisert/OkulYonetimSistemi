@@ -39,7 +39,14 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
         protected bool BaseInsert(BaseEntity entity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
-            _uow.Rep.Insert(entity);
+            _uow.Rep.Insert(entity.EntityConvert<T>());
+            return _uow.Save();
+        }
+
+        protected bool BaseUpdate(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
+        {
+            GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
+            var degisenAlanlar = 
         }
 
 
