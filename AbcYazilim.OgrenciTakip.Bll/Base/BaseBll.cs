@@ -46,8 +46,13 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
         protected bool BaseUpdate(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
-            var degisenAlanlar = 
+            var degisenAlanlar = oldEntity.DegisenAlanlariGetir(currentEntity);
+            if (degisenAlanlar.Count == 0) return true;
+            _uow.Rep.Update(currentEntity.EntityConvert<T>(),degisenAlanlar);
+            return _uow.Save();
         }
+
+        protected bool BaseDelete(BaseEntity entity,)
 
 
         private bool disposedValue;
