@@ -58,7 +58,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
         {
             GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
             if(mesajVer)
-                Messages.
+                Messages.SilMesaj()
         }
 
 

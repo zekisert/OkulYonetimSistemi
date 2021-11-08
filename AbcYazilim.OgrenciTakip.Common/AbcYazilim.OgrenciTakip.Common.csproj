@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\KartTuru.cs" />
+    <Compile Include="Functions\EnumFunctions.cs" />
     <Compile Include="Message\Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
