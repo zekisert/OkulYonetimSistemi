@@ -2,13 +2,15 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Windows.Controls;
+using System.Windows.Forms;
 using AbcYazilim.Dal.Interfaces;
 using AbcYazilim.OgrenciTakip.Bll.Functions;
 using AbcYazilim.OgrenciTakip.Bll.Interfaces;
 using AbcYazilim.OgrenciTakip.Common.Enums;
+using AbcYazilim.OgrenciTakip.Common.Functions;
 using AbcYazilim.OgrenciTakip.Common.Message;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
+using Control = System.Windows.Controls.Control;
 
 namespace AbcYazilim.OgrenciTakip.Bll.Base
 {
@@ -20,7 +22,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
 
         protected BaseBll() { }
 
-        protected BaseBll(Control ctrl)
+        public BaseBll(Control ctrl)
         {
             _ctrl = ctrl;
         }
@@ -57,32 +59,17 @@ namespace AbcYazilim.OgrenciTakip.Bll.Base
         protected bool BaseDelete(BaseEntity entity, KartTuru kartTuru, bool mesajVer = true)
         {
             GeneralFunctions.CreateUnitOfWork<T,TContext>(ref _uow);
-            if(mesajVer)
-                Messages.SilMesaj()
-        }
-
-
-        private bool disposedValue;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    
-                }
-
-                
-                disposedValue = true;
-            }
+            if (mesajVer)
+               if (Messages.SilMesaj(kartTuru.ToName()) != DialogResult.Yes) return false;
+            _uow.Rep.Delete(entity.EntityConvert<T>());
+            return _uow.Save();
         }
 
         public void Dispose()
         {
-           
-            Dispose(disposing: true);
-            System.GC.SuppressFinalize(this);
+            //_ctrl?.Dispose();
+            _uow?.Dispose();
+
         }
     }
 }
