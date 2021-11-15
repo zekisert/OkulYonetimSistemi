@@ -1,8 +1,10 @@
-﻿using AbcYazilim.OgrenciTakip.Model.Entities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using AbcYazilim.OgrenciTakip.Model.Entities;
 using AbcYazilim.OgrenciTakip.Model.Entities.Base;
 
 namespace AbcYazilim.OgrenciTakip.Model.Dto
 {
+    [NotMapped]
     public class OkulS:Okul
     {
         public string IlAdi { get; set; }

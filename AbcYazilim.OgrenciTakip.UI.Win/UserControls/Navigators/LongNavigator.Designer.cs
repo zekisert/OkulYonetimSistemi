@@ -91,9 +91,8 @@ namespace AbcYazilim.OgrenciTakip.UI.Win.UserControls.Navigators
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.ControlNavigator Navigator;
         private DevExpress.Utils.ImageCollection imageCollection;
         private DevExpress.Utils.DPIAwareImageCollection dpıAwareImageCollection1;
+        public DevExpress.XtraEditors.ControlNavigator Navigator;
     }
 }

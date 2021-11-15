@@ -15,7 +15,7 @@ namespace AbcYazilim.OgrenciTakip.Bll.General
 {
     public class OkulBll : BaseBll<Okul,OgrenciTakipContext>
     {
-        public OkulBll() { }
+        //public OkulBll(OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl myDataLayoutControl) { }
 
         public OkulBll(Control ctrl) : base(ctrl) { }
 
